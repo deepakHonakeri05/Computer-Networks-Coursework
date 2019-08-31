@@ -1,0 +1,16 @@
+TitleText: Performance Analysis
+XUnitText: Nodes
+YUnitText: Throughput
+
+"Throughput"
+
+10   0.445726
+20   0.426105
+30   0.337095
+40   0.314526
+50   0.422400
+60   0.419200
+70   0.491789
+80   0.605979
+90   0.433684
+100  0.236632
