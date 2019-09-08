@@ -1,0 +1,15 @@
+TitleText: "umts1PE17CS009"
+XUnitText: "band-width"
+YUnitText: "throughput"
+
+"Bandwidth" "throughput"
+
+100000	0.2045 
+125000	0.2112
+150000	0.2123
+175000	0.21709
+200000	0.2198
+225000	0.2203
+250000	0.2192
+275000	0.2201
+300000	0.2234
