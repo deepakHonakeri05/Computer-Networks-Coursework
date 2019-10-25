@@ -27,7 +27,7 @@ public class leaky
 
 		for(i=0;i<nsec;i++)
 		{ 
-			System.out.print("Enter The Size Of The Packet Entering At "+ i+1 + "sec");
+			System.out.print("Enter The Size Of The Packet Entering At "+ (i+1) + "sec");
 			inp[i] = sc.nextInt();
 		}
 

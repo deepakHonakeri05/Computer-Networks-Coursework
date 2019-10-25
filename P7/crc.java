@@ -10,18 +10,18 @@ class crc
 	{
 	  //int gp[]={1,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1};
 	  int count=0;
+
 	  for(int i=0;i<k;i++)
-	   if(a[i]==gp[0])
-	   {
-	    for(int j=i;j<divisorlength+1+i;j++)
-	     {	
-	      a[j]=a[j]^gp[count++];
-	      //System.out.print(a[j]);	
-	     }	
-	     count=0;
+	   	if(a[i]==gp[0])
+	   	{
+	    	for(int j=i;j<divisorlength+i;j++)
+	      	   a[j]=a[j]^gp[count++];
+
+	     	count=0;
 	    }
+
 	  System.out.println();
-        }
+     }
 
 	public static void main(String args[])
 	{
@@ -32,6 +32,7 @@ class crc
 	 int lenDiv,lenData,k;
 
 	 crc ob = new crc();
+
 	 Scanner sc = new Scanner(System.in);
 
 	 System.out.println("Length of the divisor");
@@ -47,28 +48,36 @@ class crc
 
 	 int flag=0;
 
-	 System.out.println("Enter message");
+	 System.out.println("Enter message(dataword)");
 	 for(int i=0;i<lenData;i++)
 	    a[i]=sc.nextInt();
+
+
+	//append zeros
 
 	 for(int i=0;i<lenDiv;i++)
 	    a[lenData++]=0;
 
 	  k=lenData-lenDiv;
+
+	 // make copy
+
 	  for(int i=0;i<lenData;i++)
 	   b[i]=a[i];
 
+	// divide
+
 	  ob.div(a,k);
+
+	// XOR operation    ---- append reminder
 
 	  for(int i=0;i<lenData;i++)
 	    a[i]=a[i]^b[i];
 
-	  System.out.println("Data to be transmitted");
-
+	  System.out.println("Data to be transmitted");f
 	  for(int i=0;i<lenData-1;i++)
 	     System.out.print(a[i]+" ");
-
-	 System.out.println();
+	  System.out.println();
 
 	 System.out.println("Enter received data");
 	 for(int i=0;i<lenData-1;i++)
@@ -84,9 +93,9 @@ class crc
 	    }
 
 	 if(flag==1)
-	 System.out.println("error in data");
+	 	System.out.println("error in data");
 	 else
-	 System.out.println("no error");
+	 	System.out.println("no error");
 
 	 }
 }
